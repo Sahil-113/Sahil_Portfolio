@@ -299,7 +299,7 @@
       max-width: 250px;
       border-radius: 50%;
       border: 5px solid var(--primary-color);
-      animation: float 3s ease-in-out infinite;
+      animation: float 3s linear infinite;
     }
 
     @keyframes float {
@@ -308,13 +308,19 @@
 
       }
 
+      25% {
+        transform: translateX(-30px);
+      }
       50% {
-        transform: translateX(-40px);
+        transform: translateX(0);
       }
 
+      75% {
+        transform: translateX(30px);
+
+      }
       100% {
         transform: translateX(0);
-
       }
     }
 
@@ -1038,6 +1044,9 @@
       .hero-text h1 {
         font-size: 2rem;
         padding-top:30px;
+      }
+      .btn{
+        margin-top:20px;
       }
 
       .footer-content {
